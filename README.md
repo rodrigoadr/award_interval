@@ -65,7 +65,7 @@ pytest test_integration.py
 ```
 
 # Arquivo script.py
-Este é o arquivo principal da aplicação Flask. Preencha com o conteúdo do script principal.
+Este é o arquivo principal da aplicação Flask.
 
 # Arquivo test_integration.py
-Este é o arquivo de teste de integração. Preencha com o conteúdo do arquivo de testes de integração.
+Este é o arquivo de teste de integração.
