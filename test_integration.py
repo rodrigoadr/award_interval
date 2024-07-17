@@ -1,7 +1,7 @@
 import os
 import pytest
 import json
-from script import app, sqlite_db_path, csv_2_db
+from script import app
 
 @pytest.fixture
 def client():
@@ -10,9 +10,8 @@ def client():
 
     # Inicialize o banco de dados de teste
     with app.app_context():
-        test_db_path = './archive/test_database.db'
+        test_db_path = ':memory:'
         app.config['sqlite_db_path'] = test_db_path
-        csv_2_db()  # Carregue os dados de teste no banco de dados
 
     with app.test_client() as client:
         yield client
