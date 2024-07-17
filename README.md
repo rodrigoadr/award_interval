@@ -2,15 +2,14 @@
 
 Este projeto é uma aplicação Flask que lê dados de um arquivo CSV e os insere em um banco de dados SQLite. A aplicação possui um endpoint que retorna informações sobre o intervalo de tempo entre prêmios ganhos por produtores. Além disso, há um conjunto de testes de integração que garantem a funcionalidade correta da aplicação.
 
-## Estrutura do Projeto
+Fonte do arquivo CSV: https://www.kaggle.com/datasets/unanimad/the-oscar-award?resource=download
 
-golden_raspberry_awards/
-├── script.py
-├── test_integration.py
-├── archive/
-│ ├── the_oscar_award.csv
-│ └── database.db
-└── venv/ (se estiver usando um ambiente virtual)
+## Estrutura do Projeto
+- script.py
+- test_integration.py
+- archive/
+  - the_oscar_award.csv
+  - database.db
 
 ## Requisitos
 
@@ -68,7 +67,7 @@ pytest test_integration.py
 ```
 
 # Arquivo script.py
-Este é o arquivo principal da aplicação Flask. Preencha com o conteúdo do script principal.
+Este é o arquivo principal da aplicação Flask.
 
 # Arquivo test_integration.py
-Este é o arquivo de teste de integração. Preencha com o conteúdo do arquivo de testes de integração.
+Este é o arquivo de teste de integração.
