@@ -9,7 +9,6 @@ Fonte do arquivo CSV: https://www.kaggle.com/datasets/unanimad/the-oscar-award?r
 - test_integration.py
 - archive/
   - the_oscar_award.csv
-  - database.db
 
 ## Requisitos
 
