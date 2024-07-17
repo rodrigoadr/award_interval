@@ -28,9 +28,20 @@ def test_get_award_interval(client):
 
     # Verifique se o retorno é um JSON válido
     json_data = json.loads(response.data)
-    assert isinstance(json_data, list)
-    assert all(isinstance(item, dict) for item in json_data)
-    assert all(key in item for item in json_data for key in ['producer', 'interval', 'followingWin', 'previousWin'])
+    assert isinstance(json_data, dict)
+    assert 'min' in json_data
+    assert 'max' in json_data
+    
+    min_data = json_data['min']
+    max_data = json_data['max']
+    
+    # Verifique se os dados mínimos e máximos têm a estrutura esperada
+    assert isinstance(min_data, list)
+    assert isinstance(max_data, list)
+    
+    for item in min_data + max_data:
+        assert isinstance(item, dict)
+        assert all(key in item for key in ['producer', 'interval', 'followingWin', 'previousWin'])
 
 def test_bad_request(client):
     # Teste para verificar se a API retorna erro 400 em caso de erro
